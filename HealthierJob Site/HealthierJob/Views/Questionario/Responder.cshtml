@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Responder";
+
+    Questionario q = ViewData["q"] as Questionario;
+
+    int aux;
+    int total;
+
+    if (TempData["perg"] == null)
+    {
+        aux = 1;
+        total = 0;
+    }
+    else
+    {
+        aux = (int)TempData["perg"];
+        aux++;
+        total = (int)TempData["tot"];
+    }
+
+    int pessimo = 1;
+    int ruim = 2;
+    int medio = 3;
+    int bom = 4;
+    int otimo = 5;
+}
+
+<link rel="stylesheet" href="~/css/responder.css" />
+
+
+<form class="form" asp-action="Responder">
+
+    <div class="div">
+        <p>@q.Pergunta</p>
+
+        <input type="hidden" name="numPerg" value="@aux" />
+        <input type="hidden" name="total" value="@total" />
+
+        <div class="alinhar">
+            <button name="valor" value="@pessimo">
+                <img src="~/img/pessimo.png" />
+            </button>
+
+            <button name="valor" value="@ruim">
+                <img src="~/img/ruim.png" />
+            </button>
+
+            <button name="valor" value="@medio">
+                <img src="~/img/medio.png" />
+            </button>
+
+            <button name="valor" value="@bom">
+                <img src="~/img/bom.png" />
+            </button>
+
+            <button name="valor" value="@otimo">
+                <img src="~/img/otimo.png" />
+            </button>
+        </div>
+    </div>
+</form>
+

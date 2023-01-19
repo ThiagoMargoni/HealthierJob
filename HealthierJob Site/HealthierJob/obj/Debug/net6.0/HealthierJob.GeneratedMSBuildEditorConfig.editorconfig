@@ -1,0 +1,117 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HealthierJob
+build_property.RootNamespace = HealthierJob
+build_property.ProjectDir = C:\Users\danna\Desktop\TCC\HealthierJob Site\HealthierJob\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\danna\Desktop\TCC\HealthierJob Site\HealthierJob
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Doencas/Cadastrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhc1xDYWRhc3RyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Doencas/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhc1xFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Doencas/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9lbmNhc1xMaXN0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Feedback/Calendario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZGJhY2tcQ2FsZW5kYXJpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Feedback/Retornar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZGJhY2tcUmV0b3JuYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Home/Faq.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGYXEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Home/Inicial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmljaWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Home/Teste.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZXN0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Questionario/Cadastrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25hcmlvXENhZGFzdHJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Questionario/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25hcmlvXEVkaXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Questionario/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25hcmlvXExpc3Rhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Questionario/Responder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlc3Rpb25hcmlvXFJlc3BvbmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Shared/_Toast.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ub2FzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Sintomas/Cadastrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ludG9tYXNcQ2FkYXN0cmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Sintomas/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ludG9tYXNcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Sintomas/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ludG9tYXNcTGlzdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Sintomas/Responder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2ludG9tYXNcUmVzcG9uZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Usuario/Cadastrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDYWRhc3RyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Usuario/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Usuario/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMaXN0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Usuario/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/danna/Desktop/TCC/HealthierJob Site/HealthierJob/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-j8m09ls2ju

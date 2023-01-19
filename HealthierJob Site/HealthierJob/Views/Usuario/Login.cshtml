@@ -1,0 +1,21 @@
+﻿@model HealthierJob.Usuario
+
+<link rel="stylesheet" href="~/css/login.css" />
+
+<form asp-action="Login" class="formulário">
+    
+    <h1>Login</h1>
+    <hr>
+
+    <input asp-for="Codigo" autocomplete="off" placeholder="Código do funcionário" type="text" />
+    <input asp-for="Senha" placeholder="Senha" type="password" />
+
+    <button>Entrar</button>
+
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

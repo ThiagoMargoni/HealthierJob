@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="~/css/calendario.css" />
+</head>
+<body>
+	
+    <div class="calendario"> 
+        <div class="date-picker">
+            <div class="selected-date"></div>
+
+            <div class="dates">
+                <div class="month">
+                    <div class="arrows prev-mth">&lt;</div>
+                    <div class="mth"></div>
+                    <div class="arrows next-mth">&gt;</div>
+                </div>
+
+                <div class="days"></div>
+            </div>
+        </div>
+
+        <form asp-action="Calendario">
+            <input name="data" id="d" value="" type="hidden" />
+
+            <button type="submit" id="botao" onclick="enviar()">
+                <img src="~/img/lupa.png" height="60px" width="60px" />
+            </button>
+        </form>
+    </div>
+
+	@{
+		if(ViewData["f"] != null && ViewData["f"] != "vazio")
+		{
+			Feedback f = ViewData["f"] as Feedback;
+
+            <p class="p"> RELATÓRIO DA SAÚDE</p>
+            <div class="div">
+                <section>
+                    <h1 class="h">Dados</h1>
+                    <div class="div2">
+                        <p class="qtd">Quantidade de Passos Hoje: @f.QtdPassos</p>
+                        <p class="media">Média das Respostas no Questionário: </p>
+
+                        <p>
+                            @{
+                                if (@f.Saude == 1)
+                                {
+                                    <img class="img" src="~/img/pessimo.png" />
+                                }
+                                else if (@f.Saude == 2)
+                                {
+                                    <img class="img" src="~/img/ruim.png" />
+                                }
+                                else if (@f.Saude == 3)
+                                {
+                                    <img class="img" src="~/img/medio.png" />
+                                }
+                                else if (@f.Saude == 4)
+                                {
+                                    <img class="img" src="~/img/bom.png" />
+                                }
+                                else
+                                {
+                                    <img class="img" src="~/img/otimo.png" />
+                                }
+                            }
+                        </p>
+
+                    </div>
+                </section>
+
+                <section>
+                    <h1>Recomendações médicas</h1>
+                    <div class="div3">
+                        <p class="rec">@f.Recomendacao</p>
+                    </div>
+                </section>
+            </div>
+        }
+        else if (ViewData["f"] == "vazio")
+        {
+            <p class="p"> DADOS NÃO ENCONTRADOS</p>
+        }
+    }
+	
+	<script src="~/js/calendario.js"></script>
+</body>
+</html>

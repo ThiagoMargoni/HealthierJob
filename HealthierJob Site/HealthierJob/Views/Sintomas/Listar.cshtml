@@ -1,0 +1,37 @@
+﻿@model IEnumerable<HealthierJob.Sintomas>
+
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<link rel="stylesheet" href="~/css/listar_sintomas.css"/>
+
+<section class="pesquisa">
+
+    <h1>Listar Sintomas</h1>
+    <input name="consulta" id="txt_consulta" placeholder="Digite o campo que será usado para pesquisar" type="text" class="form-control" />
+</section>
+
+
+
+<table class="table" id="tabela">
+    <thead>
+        <tr>
+            <th>Nome do sintoma</th>
+            <th>Quantidade de Relatos</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @Html.DisplayFor(modelItem => item.NomeSintoma) </td>
+                <td> @Html.DisplayFor(modelItem => item.QtdRelatos) </td>
+                <td>
+                    @Html.ActionLink("Editar", "Editar", new { codigo = item.CodigoSintoma }) 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

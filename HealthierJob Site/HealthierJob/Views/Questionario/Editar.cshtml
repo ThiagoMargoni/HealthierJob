@@ -1,0 +1,24 @@
+﻿@model HealthierJob.Questionario
+
+@{
+    ViewData["Title"] = "Editar";
+
+    Questionario q = ViewData["q"] as Questionario;
+}
+
+<link rel="stylesheet" href="~/css/cadastrar_perg.css" />
+
+<form asp-action="Editar" class="formulário">
+    <br><br><br>
+    <h1>Editar Pergunta</h1>
+    <hr>
+    <div>
+        <input asp-for="Id_perg" value="@q.Id_perg" type="hidden" class="form-control" />
+        <textarea class="input" autocomplete="off" asp-for="Pergunta" data="@q.Pergunta" maxlength="255"></textarea>
+    </div>
+
+    <br>
+
+    <button>Editar</button>
+</form>
+

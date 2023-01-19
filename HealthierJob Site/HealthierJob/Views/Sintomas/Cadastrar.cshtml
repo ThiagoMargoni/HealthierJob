@@ -1,0 +1,22 @@
+﻿@model HealthierJob.Sintomas
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<link rel="stylesheet" href="~/css/cadastrar_sintomas.css" />
+
+<form asp-action="Cadastrar" class="formulário">
+    <br><br><br>
+    <h1>Cadastre um novo sintoma no sistema</h1>
+    <hr>
+    <div>
+        <input autocomplete="off" type="text" asp-for="NomeSintoma" placeholder="Nome do Sintoma">
+        <input type="number" asp-for="QtdRelatos" id="qtdRelato" placeholder="Quantidade de Vezes Relatado na Empresa">
+    </div>
+
+    <br>
+
+    <button>Cadastrar </button>
+</form>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_usuario"
+            android:icon="@drawable/pessoa"
+            android:title="Dados" />
+
+        <item
+            android:id="@+id/nav_questionario"
+            android:icon="@drawable/questionario"
+            android:title="Questionário" />
+
+        <item
+            android:id="@+id/nav_calendario"
+            android:icon="@drawable/calendario"
+            android:title="Consultar" />
+
+    </group>
+</menu>

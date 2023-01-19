@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_calendario">
+
+    <fragment
+        android:id="@+id/nav_calendario"
+        android:name="com.example.healthierjob.ui.FragmentCalendario"
+        android:label="@string/menu_calendario"
+        tools:layout="@layout/fragment_calendario" />
+
+    <fragment
+        android:id="@+id/nav_questionario"
+        android:name="com.example.healthierjob.ui.FragmentQuestionario"
+        android:label="@string/menu_questionario"
+        tools:layout="@layout/fragment_questionario" />
+
+    <fragment
+        android:id="@+id/nav_usuario"
+        android:name="com.example.healthierjob.ui.FragmentUsuario"
+        android:label="@string/menu_usuario"
+        tools:layout="@layout/fragment_usuario" />
+</navigation>

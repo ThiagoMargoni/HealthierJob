@@ -1,0 +1,53 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0 auto;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+
+/*****************************************/
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+}
+
+.pesquisa {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+
+    .pesquisa h1 {
+        font-family: 'Poppins', sans-serif;
+    }
+
+input {
+    width: 70%;
+}
+
+table {
+    font-family: 'Poppins', sans-serif;
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: fit-content;
+}
+
+td, th {
+    text-align: left;
+    padding: 8px;
+    border: #314c70 1px solid;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}

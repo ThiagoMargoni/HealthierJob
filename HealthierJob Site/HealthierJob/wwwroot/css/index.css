@@ -1,0 +1,93 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0 auto;
+}
+
+body {
+    background-color: #ffffff;
+}
+/******/
+.lip {
+    width: 100%;
+    height: 9vh;
+    background-color: #5380bd;
+}
+
+.imgP {
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    background-image: url(../img/mansports.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0.1px 0.1px 15px 0.1px #00000088;
+}
+
+.txtImg {
+    width: 50%;
+    height: 50vh;
+    margin-left: 50%;
+    margin-top: 10vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+    .txtImg h1 {
+        color: #ffffff;
+        font-size: 6.5em;
+    }
+
+    .txtImg p {
+        margin-left: 0%;
+        width: 70%;
+        color: #ffffff;
+        font-size: 1.3em;
+    }
+
+/********/
+.boxM {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 47vh;
+    background-color: #f1f1f1;
+    margin-top: 45%;
+    box-shadow: 1px 1px 20px 1px #0000005a;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 25px;
+    z-index: 1;
+}
+
+    .boxM h1 {
+        color: #314c70;
+        font-size: 2.3em;
+    }
+
+    .boxM p {
+        color: #000000;
+        font-size: 1.3em;
+        width: 90%;
+        margin-top: 2%;
+    }
+
+.txM {
+    width: 33.3%;
+    height: 40vh;
+    margin-top: 5vh;
+    border-right: 1px solid #0000003a;
+}
+
+.txM2 {
+    width: 33.3%;
+    height: 40vh;
+    margin-top: 5vh;
+    border-right: 1px solid #0000003a;
+}
+
+.txM3 {
+    width: 33.3%;
+    height: 40vh;
+    margin-top: 5vh;

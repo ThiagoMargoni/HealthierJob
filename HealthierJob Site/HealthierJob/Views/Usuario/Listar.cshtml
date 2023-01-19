@@ -1,0 +1,58 @@
+﻿@model IEnumerable<HealthierJob.Usuario>
+
+@{
+    ViewData["Title"] = "Listar";
+
+    MetodosController m = new MetodosController();
+}
+
+<link rel="stylesheet" href="~/css/listar.css" />
+
+<section class="pesquisa">
+
+    <h1>Listar Usuários</h1>
+    <input name="consulta" id="txt_consulta" placeholder="Digite o campo desejado para pesquisar" type="text" class="form-control" />
+</section>
+
+<table class="table" id="tabela">
+    <thead>
+        <tr>
+        <th>Nome do usuário</th>
+        <th>Código do funcionário</th>
+        <th>Idade</th>
+        <th>Data de entrada</th>
+        <th>Data de saída</th>
+        <th>Área</th>
+        <th>Tipo do funcionário</th>
+        <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.NomeCompleto)</td>
+            <td>@Html.DisplayFor(modelItem => item.Codigo)</td>
+            <td>@Html.DisplayFor(modelItem => item.Idade)</td>
+            <td>@m.RemoverZero(item.DataEntrada.ToString())</td>
+            <td>@m.RemoverZero(item.DataSaida.ToString())</td>
+            <td>@Html.DisplayFor(modelItem => item.AreaAtuacao)</td>
+            <td>@Html.DisplayFor(modelItem => item.Tipo)</td>
+
+            <td>
+                    @Html.ActionLink("Editar", "Editar", new { id = item.Codigo }) |
+
+                    @if (item.Status == "ativo")
+                    {
+
+                        @Html.ActionLink("Inativar", "InativarAtivar", new { acao = "inativado", id = item.Codigo })
+
+                    }
+                    else
+                    {
+                    @Html.ActionLink("Ativar", "InativarAtivar", new { acao = "ativo", id = item.Codigo })
+                    }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,45 @@
+﻿@model HealthierJob.Usuario
+
+@{
+    ViewData["Title"] = "Editar";
+
+    Usuario u = ViewData["u"] as Usuario;
+}
+
+<link rel="stylesheet" href="~/css/cadastrar.css" />
+
+<form asp-action="Editar" class="formulário" enctype="multipart/form-data">
+    <h1>Editar Funcionário</h1>
+    <hr>
+    <div>
+        <input asp-for="Status" value="@u.Status" autocomplete="off" type="text" id="status" >
+        <input asp-for="Tipo" value="@u.Tipo" autocomplete="off" type="text" id="tipo" >
+    </div>
+
+
+    <div>
+        <input value="@u.Codigo" autocomplete="off" type="text" id="codigoFunc" disabled>
+        <input asp-for="Codigo" value="@u.Codigo" type="hidden" />
+        <input asp-for="NomeCompleto" value="@u.NomeCompleto" autocomplete="off" type="text" id="nomeCompleto">
+    </div>
+
+
+    <div>
+        <input asp-for="Idade" value="@u.Idade" type="number" id="idade">
+        <input asp-for="AreaAtuacao" value="@u.AreaAtuacao" autocomplete="off" type="text" id="areaAtua">
+
+    </div>
+
+    <div>
+        <input asp-for="DataEntrada" value="@u.DataEntrada" type="date" id="data">
+        <input asp-for="DataSaida" value="@u.DataSaida" type="date" id="data">
+
+    </div>
+
+    <div>
+        <input name="img" type="file">
+        <input asp-for="Senha" autocomplete="off" type="text" placeholder="Deixe Vazio para não Mudar">
+    </div>
+
+    <button>Salvar</button>
+</form>

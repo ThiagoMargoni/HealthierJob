@@ -1,0 +1,179 @@
+﻿@model IEnumerable<HealthierJob.Doencas>
+
+@{
+    ViewData["Title"] = "Listar";
+
+    List<Doencas> d = new List<Doencas>();
+
+    MetodosController m = new MetodosController();
+
+    List<string> l = new List<string>();
+    string texto = "";
+    int zero = 0, um = 1, dois = 2, tres = 3;
+}
+
+<link rel="stylesheet" href="~/css/listar_doencas.css" />
+
+<section class="pesquisa">
+
+    <h1>Listar Doenças</h1>
+    <input name="consulta" id="txt_consulta" placeholder="Digite o campo desejado para pesquisar" type="text" class="form-control" />
+</section>
+
+<table class="table" id="tabela">
+    <thead>
+        <div class="txtT"><h1>Doenças Cadastradas</h1></div>
+    </thead>
+
+        @foreach (var item in Model)
+        {
+            d.Add(new Doencas(item.Sintomas, item.CodDoenca, item.Nome, item.QtdCasos, item.Recomendacao, item.QtdCasos));
+        }
+
+    <tbody>
+
+        @for(int j = 0; j < d.Count; j+=4)
+        {
+            <div class="boxTx">
+                @if(d.Count > zero ){ <div class="txbox">@d[zero].Nome</div>}
+                @if(d.Count > um ){ <div class="txbox">@d[um].Nome</div>}
+                @if(d.Count > dois ){ <div class="txbox">@d[dois].Nome</div>}
+                @if(d.Count > tres ){ <div class="txbox">@d[tres].Nome</div>}
+            </div>
+
+            <div class="boxTx">
+                
+                @if(d.Count > zero) {
+                     texto = "";
+                     l.Clear();
+
+                    <div class="txtD">
+                        @{
+                            l = m.VoltaNome(d[zero].Sintomas);
+
+                            for (int i = 0; i < l.Count; i++)
+                            {
+                                if(i == 0)
+                                {
+                                    texto += l[i];
+                                } else
+                                {
+                                    texto += "; " + l[i];
+                                }
+                            }
+                        }
+
+                        @texto
+                    </div>
+                }
+
+                @if(d.Count > um) {
+                     texto = "";
+                     l.Clear();
+
+                    <div class="txtD">
+                        @{
+                            l = m.VoltaNome(d[um].Sintomas);
+
+                            for (int i = 0; i < l.Count; i++)
+                            {
+                                if(i == 0)
+                                {
+                                    texto += l[i];
+                                } else
+                                {
+                                    texto += "; " + l[i];
+                                }
+                            }
+                        }
+
+                        @texto
+                    </div>
+                }
+
+                @if(d.Count > dois) {
+                     texto = "";
+                     l.Clear();
+
+                    <div class="txtD">
+                        @{
+                            l = m.VoltaNome(d[dois].Sintomas);
+
+                            for (int i = 0; i < l.Count; i++)
+                            {
+                                if(i == 0)
+                                {
+                                    texto += l[i];
+                                } else
+                                {
+                                    texto += "; " + l[i];
+                                }
+                            }
+                        }
+
+                       @texto
+                    </div>
+                }
+
+                @if(d.Count > tres) {
+                     texto = "";
+                     l.Clear();
+
+                    <div class="txtD">
+                        @{
+                            l = m.VoltaNome(d[tres].Sintomas);
+
+                            for (int i = 0; i < l.Count; i++)
+                            {
+                                if(i == 0)
+                                {
+                                    texto += l[i];
+                                } else
+                                {
+                                    texto += "; " + l[i];
+                                }
+                            }
+                        }
+
+                        @texto
+                    </div>
+                }
+            </div>
+
+            <div class="boxTx">
+                @if(d.Count > zero ){ @Html.ActionLink("Editar", "Editar", new { id = @d[zero].CodDoenca })}
+                @if(d.Count > um ){ @Html.ActionLink("Editar", "Editar", new { id = @d[um].CodDoenca })}
+                @if(d.Count > dois ){ @Html.ActionLink("Editar", "Editar", new { id = @d[dois].CodDoenca })}
+                @if(d.Count > tres ){ @Html.ActionLink("Editar", "Editar", new { id = @d[tres].CodDoenca })}
+            </div>
+
+             zero += 4;
+             um += 4;
+             dois += 4;
+             tres += 4;
+        }
+
+
+        @*<tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodDoenca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QtdCasos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Recomendacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NvlPerigo)
+            </td>
+            <td>
+                
+            </td>
+        </tr>*@
+
+    </tbody>
+</table>

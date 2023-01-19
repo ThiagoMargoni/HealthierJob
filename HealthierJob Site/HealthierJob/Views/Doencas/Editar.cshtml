@@ -1,0 +1,48 @@
+﻿@model HealthierJob.Doencas
+
+@{
+    ViewData["Title"] = "Editar";
+
+    Doencas d = ViewData["d"] as Doencas;
+}
+
+@{
+    if(TempData["cod"] == null) {
+        <input type="hidden" id="id" value="@d.CodDoenca"/>
+    } else
+    {
+        <input type="hidden" id="id" value="@TempData["cod"]" />
+    }
+}
+
+<link rel="stylesheet" href="~/css/cadastrar_doenca.css" />
+<script src="~/js/editardoenca.js"></script>
+
+<form asp-action="Editar" class="formulário">
+    <h1>Editar Doença</h1>
+    <hr>
+
+    <div id="lista"></div>
+
+    <div class="div">
+        <input asp-for="CodDoenca" value="@d.CodDoenca" type="hidden" />
+        <input class="input" autocomplete="off" type="text" asp-for="Nome" id="nome" value="@d.Nome">
+        <input class="input" type="number" asp-for="QtdCasos" id="qtdCasos" value="@d.QtdCasos">
+
+    </div>
+    <div class="div">
+        <input class="input" autocomplete="off" type="number" asp-for="NvlPerigo" id="nlvPerigo" value="@d.NvlPerigo">
+        <input class="input" type="text" asp-for="Recomendacao" id="recomendacao" value="@d.Recomendacao">
+    </div>
+
+    <p class="p">Edite os Sintomas</p>
+    <input class="tags" onblur="desfocou()" id="tags" />
+
+    <div class="alinhar">
+        <div id="teste"></div>
+   </div>
+
+    <br>
+
+    <button id ="botao" onclick="enviar()">Cadastrar</button>
+</form>

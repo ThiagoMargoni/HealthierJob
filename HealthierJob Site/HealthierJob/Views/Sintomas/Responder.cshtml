@@ -1,0 +1,26 @@
+﻿<html>
+
+<link rel="stylesheet" href="~/css/style.css">
+<script src="~/js/autocompletar.js"></script>
+
+<body>
+    <form asp-action="Responder" class="formulário">
+
+        <div id="lista"></div>
+
+        <br><br>
+        <input class="input" type="number" name="qtdPassos"  placeholder="Quantidade de Passos dados hoje">
+        <h1>Adicione os Sintomas que Sentiu Hoje</h1>
+        <hr>
+
+        <input class="tags" onblur="desfocou()" id="tags" />
+
+        <div class="alinhar">
+            <div id="teste"></div>
+        </div>
+
+        <button type="submit" id="botao" onclick="enviar()">Enviar</button>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "Retornar";
+
+    Feedback f = ViewData["f"] as Feedback;
+
+}
+
+<link rel="stylesheet" href="~/css/feedback.css" />
+
+<p class="p"> RELATÓRIO DA SAÚDE</p>
+<div class="div">
+    <section>
+        <h1 class="h">Dados</h1>
+        <div class="div2">
+            <p class="qtd">Quantidade de Passos Hoje: @f.QtdPassos</p>
+            <p class="media">Média das Respostas no Questionário: </p>
+
+            <p class="img">
+            @{
+                if (@f.Saude == 1)
+                {
+                    <img src="~/img/pessimo.png" />
+                }
+                else if (@f.Saude == 2)
+                {
+                    <img src="~/img/ruim.png" />
+                }
+                else if (@f.Saude == 3)
+                {
+                    <img src="~/img/medio.png" />
+                }
+                else if (@f.Saude == 4)
+                {
+                    <img src="~/img/bom.png" />
+                }
+                else
+                {
+                    <img src="~/img/otimo.png" />
+                }
+            }
+            </p>
+            
+        </div>
+    </section>
+
+    <section>
+        <h1>Recomendações médicas</h1>
+        <div class="div3">
+            <p class="rec">@f.Recomendacao</p>
+        </div>
+    </section>
+</div>
+
+<p></p>

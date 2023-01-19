@@ -1,0 +1,19 @@
+﻿@model HealthierJob.Questionario
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+<link rel="stylesheet" href="~/css/cadastrar_perg.css" />
+
+<form asp-action="Cadastrar" class="formulário">
+    <br><br><br>
+    <h1>Cadastre uma nova Pergunta para o Questionário</h1>
+    <hr>
+    <div>
+        <textarea class="input" autocomplete="off" asp-for="Pergunta" placeholder="Digite a Pergunta" maxlength="255"> </textarea>
+    </div>
+
+    <br>
+
+    <button>Cadastrar</button>
+</form>

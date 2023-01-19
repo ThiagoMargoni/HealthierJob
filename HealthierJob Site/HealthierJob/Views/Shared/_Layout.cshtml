@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+@{
+    MetodosController metodos = new MetodosController();
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="~/css/navfooter.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/HealthierJob.styles.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jqueryui/jquery-ui.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
+    
+    <link rel="icon" href="IMG/HealthierJob+-removebg-preview.png">
+</head>
+
+<body>
+    <partial name="_Toast" />
+
+    <header>
+        @{
+            if(metodos.VerificaLogado(this.Context) == true)
+            {
+                Usuario u = metodos.RetornaObjeto(this.Context);
+
+                <nav>
+                    <a class="logo" asp-controller="Home" asp-action="Inicial">HealthierJob+</a>
+                    <ul class="nav-list">
+                        <li><a asp-controller="Home" asp-action="Faq">FAQ</a></li>
+                        <li><a asp-controller="Questionario" asp-action="Responder">RESPONDER QUESTIONÁRIO</a></li>
+                        <li><a asp-controller="Feedback" asp-action="Retornar">FEEDBACK DIÁRIO</a></li>
+                        <li><a asp-controller="Feedback" asp-action="Calendario">PESQUISAR FEEDBACK</a></li>
+                        <li><a asp-controller="Usuario" asp-action="Sair">SAIR</a></li>
+                    </ul>
+                </nav>
+            }
+        }
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+        config = { dateFormat: "Y-m-d", altInput: true, altFormat: "d/m/Y", }
+        config2 = { enableTime: true, noCalendar: true, dateFormat: "H:i", time_24hr: true }
+
+        flatpickr("#data", config);
+        flatpickr("#time", config2);
+
+        $('input#txt_consulta').quicksearch('table#tabela tbody tr');
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

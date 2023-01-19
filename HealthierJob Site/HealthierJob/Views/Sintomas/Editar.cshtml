@@ -1,0 +1,26 @@
+﻿@model HealthierJob.Sintomas
+
+@{
+    ViewData["Title"] = "Editar";
+
+    Sintomas s = ViewData["s"] as Sintomas;
+}
+
+<link rel="stylesheet" href="~/css/cadastrar_sintomas.css" />
+
+<form asp-action="Editar" class="formulário">
+    <input type="hidden" value="@s.CodigoSintoma" name="codigoSintoma" />
+    <br><br><br>
+    <h1>Editar Sintoma</h1>
+    <hr>
+    <div>
+        <input autocomplete="off" type="text" asp-for="NomeSintoma" value="@s.NomeSintoma">
+        <input type="number" asp-for="QtdRelatos" id="qtdRelato" value="@s.QtdRelatos">
+    </div>
+
+    <br>
+
+    <button>Salvar </button>
+</form>
+
+

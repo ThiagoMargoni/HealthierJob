@@ -1,0 +1,48 @@
+﻿@model HealthierJob.Usuario
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<link rel="stylesheet" href="~/css/cadastrar.css"/>
+
+<form asp-action="Cadastrar" class="formulário" enctype="multipart/form-data">
+    <h1>Cadastre um novo funcionário</h1>
+    <hr>
+    <div>
+        <input asp-for="Status" autocomplete="off" type="text" id="status" placeholder="Digite o status do funcionario">
+        <input asp-for="Tipo" autocomplete="off" type="text" id="tipo" placeholder="Digite o tipo de funcionario">
+    </div>
+
+
+    <div>
+        <input asp-for="Codigo" autocomplete="off" type="text" id="codigoFunc" placeholder="Digite o código de funcionario">
+        <input asp-for="NomeCompleto" autocomplete="off" type="text" id="nomeCompleto" placeholder="Digite o nome de funcionario">
+    </div>
+
+
+    <div>
+        <input asp-for="Idade" type="number" id="idade" placeholder="Digite a idade">
+        <input asp-for="AreaAtuacao" autocomplete="off" type="text" id="areaAtua" placeholder="Área de Atuação">
+
+    </div>
+
+    <div>
+        <input asp-for="DataEntrada" type="date" id="data" placeholder="Data de entrada na empresa">
+        <input asp-for="DataSaida" type="date" id="data" placeholder="Data de saída da empresa">
+
+    </div>
+
+    <div>
+        <input name="img" type="file" placeholder="Foto do funcionário">
+        <input asp-for="Senha" autocomplete="off" type="text" placeholder="Digite uma senha">
+    </div>
+
+    <button>Cadastrar</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

@@ -1,0 +1,38 @@
+﻿@model HealthierJob.Doencas
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/cadastrar_doenca.css" />
+    <script src="~/js/autocompletar.js"></script>
+</head>
+
+<form asp-action="Cadastrar" class="formulário">
+    <h1>Cadastre uma nova doença no sistema</h1>
+    <hr>
+
+    <div id="lista"></div>
+
+    <div class="div">
+        <input class="input" autocomplete="off" type="text" asp-for="Nome" id="nome" placeholder="Digite o nome da doença">
+        <input class="input" type="number" asp-for="QtdCasos" id="qtdCasos" placeholder="Quantidade de Casos">
+
+    </div>
+    <div class="div">
+        <input class="input" type="number" asp-for="NvlPerigo" id="nlvPerigo" placeholder="Nível Perigo">
+        <input class="input" autocomplete="off" type="text" asp-for="Recomendacao" id="recomendacao" placeholder="Recomendação Médica">
+    </div>
+
+    <p class="p">Adicione os Sintomas</p>
+    <input class="tags" id="tags" />
+
+    <div class="alinhar">
+        <div id="box"></div>
+    </div>
+
+    <br>
+
+    <button id ="botao" onclick="enviar()">Cadastrar</button>
+</form>
